@@ -43,7 +43,7 @@ def main():
         print(compute_height(n, parents))
         pass
     if "F" in firstInput:
-        filename = './'+input()
+        filename = '/test/'+input()
         if not "a" in filename and not "A" in filename  :
             # let user input file name to use, don't allow file names with letter a
             # account for github input inprecision
