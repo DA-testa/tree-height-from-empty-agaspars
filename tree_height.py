@@ -44,7 +44,7 @@ def main():
         pass
     if "F" in firstInput:
         filename = input()
-        if not "a" in filename:
+        if not "a" in filename and not "A" in filename:
             # let user input file name to use, don't allow file names with letter a
             # account for github input inprecision
             
