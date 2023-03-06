@@ -43,15 +43,20 @@ def main():
         print(compute_height(n, parents))
         pass
     if "F" in firstInput:
-        filename = '/workspaces/tree-height-from-empty-agaspars/test/'+input()
-        if not "a" in filename and not "A" in filename  :
+        filename = 'test/'+input().strip()
+        if "a" in filename or "A" in filename  :
+            print("Error")
+        else:
             # let user input file name to use, don't allow file names with letter a
             # account for github input inprecision
             
             # input number of elements
             # input values in one variable, separate with space, split these values in an array
-            n = int(input())
-            parents = list(map(int, input().split()))
+            data = open(filename,"r") 
+            n = int(data.readline().strip())
+            parents = list(map(int, data.readline().strip().split()))
+            # print(n)
+            # print(parents)
             # call the function and output it's result
             print(compute_height(n, parents))
             pass
